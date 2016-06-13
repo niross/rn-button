@@ -61,7 +61,7 @@ export const Button = (props) =>
         <Text style={styles.text}> {props.loadingText ? props.loadingText : props.text}</Text>
       </View>
       :
-      <Text style={styles.text}>{props.text}</Text>
+      <Text style={[styles.text, props.disabled ? styles.disabled : {}]}>{props.text}</Text>
     }
   </TouchableOpacity>;
 
