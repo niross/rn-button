@@ -23,13 +23,16 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     marginLeft: 10,
     marginRight: 10,
-    borderRadius: 2
+    marginBottom: 10,
+    borderRadius: 2,
+    borderWidth: 1,
+    borderColor: '#ccc'
   },
   disabled: {
-    backgroundColor: 'lightgray'
+    opacity: 0.5
   },
   text: {
-    color: '#DB4437',
+    color: '#333',
     textAlign: 'center',
     fontWeight: 'bold'
   },
@@ -42,6 +45,7 @@ const styles = StyleSheet.create({
 
 export const Button = (props) =>
   <TouchableOpacity
+    disabled={props.disabled}
     style={[
       styles.container,
       StyleSheet.create(props.style),
